@@ -1,0 +1,8 @@
+.DS_Store
+*.log
+*.error
+
+node_modules/
+dist/
+.idea/
+.webpack/

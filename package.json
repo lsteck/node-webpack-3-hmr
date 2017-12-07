@@ -1,0 +1,74 @@
+{
+  "name": "node-server-webpack-3-hmr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "homepage": "https://github.com/wpannell/node-webpack-3-hmr#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wpannell/node-webpack-3-hmr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wpannell/node-webpack-3-hmr/issues"
+  },
+  "keywords": [
+    "node"
+  ],
+  "engines": {
+    "node": "8.9.2",
+    "npm": "5.5.1",
+    "yarn": "1.3.2"
+  },
+  "scripts": {
+    "lint": "esw -f simple-detail --clear server",
+    "lint:watch": "npm run --silent lint -- -w",
+    "start": "webpack --colors --progress",
+    "start:reload": "webpack --colors --progress & browser-sync start --proxy 'localhost:3001' --files 'dist'",
+    "spec:unit": "NODE_ENV=TEST rm -rf ./tmp/mocha-webpack && mocha-webpack --webpack-config webpack.config.spec.js --reporter spec --growl --colors --timeout 10000 --require source-map-support/register server/spec/helper.js \"server/**/*.spec.js\"",
+    "spec:watch": "npm run spec:unit -- --watch",
+    "tdd": "npm run spec:watch"
+  },
+  "dependencies": {
+    "apollo-server-express": "1.1.6",
+    "bcrypt": "1.0.3",
+    "express": "4.16.1",
+    "express-jwt": "5.3.0",
+    "graphql-tools": "2.4.0",
+    "immutable": "3.8.2",
+    "immutable-ext": "1.1.2",
+    "jsonwebtoken": "8.1.0",
+    "lodash.merge": "4.6.0",
+    "mongoose": "4.12.1",
+    "rxjs": "5.5.3"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.3",
+    "babel-loader": "7.1.2",
+    "babel-plugin-transform-regenerator": "6.26.0",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-stage-0": "6.24.1",
+    "better-console": "1.0.1",
+    "bluebird": "3.5.1",
+    "clrscr": "1.0.4",
+    "concurrently": "3.5.1",
+    "eslint": "4.12.1",
+    "eslint-loader": "1.9.0",
+    "eslint-plugin-mocha": "4.11.0",
+    "eslint-plugin-react": "7.5.1",
+    "eslint-watch": "3.1.3",
+    "graphql-tag": "2.4.2",
+    "husky": "0.14.3",
+    "mocha": "4.0.1",
+    "mocha-webpack": "1.0.1",
+    "ramda": "0.25.0",
+    "raw-loader": "0.5.1",
+    "should": "13.1.3",
+    "source-map-support": "0.5.0",
+    "start-server-webpack-plugin": "2.2.0",
+    "testdouble": "3.2.6",
+    "webpack": "3.6.0",
+    "webpack-node-externals": "1.6.0"
+  }
+}
