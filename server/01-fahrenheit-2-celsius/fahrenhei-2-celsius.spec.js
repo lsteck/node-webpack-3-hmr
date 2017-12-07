@@ -1,5 +1,9 @@
-describe('the fahrenheit2celsius canary spec', () => {
-  it('shows the infrastructure works', () => {
+describe.only('a fahrenheit2celsius feature', () => {
+  it('has a working test infrastructure', () => {
     true.should.be.true();
   });
+
+  it('fahrenheit2celsius(32) === 0');
+  it('fahrenheit2celsius(50) === 10');
+  it('fahrenheit2celsius(212) === 100');
 });
