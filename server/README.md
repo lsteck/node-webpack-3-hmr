@@ -3,6 +3,8 @@ ___
 
 ### [The Four Rules of Simple Design](https://martinfowler.com/bliki/BeckDesignRules.html):
 
+* **_(purge lint violations)_**
+
 * **_Passes the tests_**
 * **_Reveals intention_**
 * **_No duplication_**
