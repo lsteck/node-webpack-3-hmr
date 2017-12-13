@@ -4,6 +4,6 @@ describe.only('a fahrenheit2celsius feature', () => {
   });
 
   it('fahrenheit2celsius(32) === 0');
-  it('fahrenheit2celsius(50) === 10');
   it('fahrenheit2celsius(212) === 100');
+  it('fahrenheit2celsius(50) === 10');
 });
