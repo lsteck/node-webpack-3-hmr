@@ -13,5 +13,7 @@ describe.only('a fahrenheit2celsius feature', () => {
     fahrenheit2celsius(212).should.equal(100);
   });
 
-  it('fahrenheit2celsius(50) === 10');
+  it('fahrenheit2celsius(50) === 10', () => {
+    fahrenheit2celsius(50).should.equal(10);
+  });
 });
