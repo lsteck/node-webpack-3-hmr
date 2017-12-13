@@ -1,6 +1,6 @@
 let fahrenheit2celsius = (fahrenheit) => (fahrenheit - 32) * 5 / 9;
 
-describe.only('a fahrenheit2celsius feature', () => {
+describe('a fahrenheit2celsius feature', () => {
   it('has a working test infrastructure', () => {
     true.should.be.true();
   });
